@@ -1,0 +1,33 @@
+<form class="form-property" name="propertyForm">
+  <div class="form-group">
+    <label for="title">Title :</label>
+    <input type="text" class="form-control" id="title" ng-model="p.title" required autofocus>
+  </div>
+  <div class="form-group">
+    <label for="summary">Summary :</label>
+    <input type="text" class="form-control" id="summary" ng-model="p.title" required>
+  </div>
+  <div class="form-group">
+    <label for="keywords">keywords :</label>
+    <input type="text" class="form-control" id="keywords" ng-model="p.keywords" required>
+  </div>
+  <div class="form-group">
+    <label for="price">Price in words :</label>
+    <input type="text" class="form-control" id="price" ng-model="p.price_formatted" required>
+  </div>
+  <div class="form-group">
+    <label for="size">size :</label>
+    <input type="number" class="form-control" id="size" ng-model="p.size" required> Ft2
+  </div>
+  <div class="form-group">
+    <label for="bathrooms">Bathrooms :</label>
+    <input type="number" class="form-control" id="bathrooms" ng-model="p.bathroom_number" required> 
+  </div>
+  <div class="form-group">
+    <label for="bedrooms">Bedrooms :</label>
+    <input type="number" class="form-control" id="bedrooms" ng-model="p.bedroom_number" required>
+  </div>
+  <div class="warn red">{{propertyForm.$invalid ? "Please fill all information" : "Click Save!"}}</div>
+  
+  <button type="submit" class="btn btn-default" ng-disabled="propertyForm.$invalid" ng-click="submitProperty()">Submit</button>
+</form>

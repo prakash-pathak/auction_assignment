@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="libs/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="libs/ngGallery.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ng-gallery.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="auctionApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <div ui-view="header"></div>
+    <div class="container">
+        <div ui-view="main"></div>
+    </div>
+    <div class="footer">
+        <div ui-view="footer"></div>
+    </div>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="modules/common/base.ctrl.js"></script>
+    <script src="modules/property/property.model.js"></script>
+    <script src="modules/property/properties.model.js"></script>
+    <script src="modules/property/properties.service.js"></script>
+    <script src="modules/property/property.ctrl.js"></script>
+    <script src="modules/property/property.editor.ctrl.js"></script>
+    <script src="modules/homepage/home.ctrl.js"></script>
+    <script src="modules/common/header.ctrl.js"></script>
+    <script src="modules/customer/auth.ctrl.js"></script>
+    <script src="modules/customer/auth.model.js"></script>
+    <script src="modules/customer/auth.service.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

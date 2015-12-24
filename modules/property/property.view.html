@@ -1,0 +1,24 @@
+<div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
+    <div class="media">
+        <ng-gallery images="images" ng-show="singleView"></ng-gallery>
+        <a ng-show="!singleView" class="pull-left" target="_parent" href="javascript:void(0)" ng-click="openPropertyDetail(p)">
+            <img alt="image" class="img-responsive" ng-src="{{singleView ? p.getImgUrl() : p.getThumbUrl()}}"></a>
+        <div class="clearfix visible-sm"></div>
+        <div class="media-body fnt-smaller">
+            <a href="#" target="_parent"></a>
+            <h4 class="media-heading">
+                                  <a href="javascript:void(0)" ng-click="openPropertyDetail(p)" target="_parent">{{p.getPriceFormatted()}} <small class="pull-right">{{p.getListerName()}}</small></a></h4>
+            <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
+                <li>{{p.getSize()}} {{p.getSizeUnit()}}</li>
+                <li style="list-style: none">|</li>
+                <li>{{p.getBedroomNumber()}} Beds</li>
+                <li style="list-style: none">|</li>
+                <li>{{p.getBathroomNumber()}} Baths</li>
+            </ul>
+            <p class="hidden-xs">{{p.getSummary()}}
+                <span class="fnt-smaller fnt-lighter fnt-arial">{{p.getTitle()}}</span>
+            </p><span class="fnt-smaller fnt-lighter fnt-arial" href="javascript:void(0)" ng-click="editThisProperty(p)">Edit this property</span>
+            </p><span class="fnt-smaller fnt-lighter fnt-arial" href="javascript:void(0)" ng-click="deleteThisProperty(p)">Delete this property</span>
+        </div>
+    </div>
+</div>

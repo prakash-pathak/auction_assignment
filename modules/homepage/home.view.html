@@ -1,0 +1,19 @@
+<div>
+    <p class="lead">
+        {{message}}
+    </p>
+    <p><a class="btn btn-lg btn-success" ui-sref="base.login" ng-show="!isLoggedUser">Go To Login!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+<ul class="list-inline">Change View Type (Selected: {{viewType == 1 ? 'Card' : 'List'}}):
+    <li><a ng-click=changeView(1)>Card</a></li>
+    <li><a ng-click=changeView(2)>List</a></li>
+</ul>
+<div class="row">
+    <div ng-class="{1:'col-sm-6', 2:'col-sm'}[viewType]" ng-repeat="p in properties | limitTo:6">
+        <!-- Begin Listing: 701 W ALLENS LN-->
+        <div ng-include="'../modules/property/property.view.html'"></div>
+        <!-- End Listing-->
+    </div>
+    <!-- End Col -->
+</div>
+<!-- End row -->
